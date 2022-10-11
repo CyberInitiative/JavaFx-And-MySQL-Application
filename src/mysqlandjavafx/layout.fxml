@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="523.0" prefWidth="844.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mysqlandjavafx.Controller">
+   <children>
+      <Button layoutX="53.0" layoutY="390.0" mnemonicParsing="false" onAction="#createNewSQLEntry" prefHeight="35.0" prefWidth="96.0" text="Submit" />
+      <GridPane layoutX="12.0" layoutY="35.0" prefHeight="330.0" prefWidth="178.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label prefHeight="18.0" prefWidth="150.0" text="Manufacturer ID" />
+            <TextField fx:id="manufacturerTextField" GridPane.rowIndex="1" />
+            <Label prefHeight="18.0" prefWidth="150.0" text="Model" GridPane.rowIndex="2" />
+            <TextField fx:id="modelTextField" GridPane.rowIndex="3" />
+            <Label text="Body Shape" GridPane.rowIndex="4" />
+            <TextField fx:id="bodyShapeTextField" GridPane.rowIndex="5" />
+            <Label text="Strings Number" GridPane.rowIndex="6" />
+            <TextField fx:id="stringNumberTextField" GridPane.rowIndex="7" />
+            <TextField fx:id="scaleTextField" GridPane.rowIndex="9" />
+            <Label text="Scale" GridPane.rowIndex="8" />
+            <Label text="Color" GridPane.rowIndex="10" />
+            <TextField fx:id="colorTextField" GridPane.rowIndex="11" />
+         </children>
+      </GridPane>
+      <Separator layoutX="199.0" orientation="VERTICAL" prefHeight="523.0" prefWidth="6.0" />
+      <Button layoutX="53.0" layoutY="432.0" mnemonicParsing="false" onAction="#updateSQLEntry" prefHeight="35.0" prefWidth="96.0" text="Edit" />
+      <Button layoutX="53.0" layoutY="474.0" mnemonicParsing="false" onAction="#deleteSQLEntry" prefHeight="35.0" prefWidth="96.0" text="Delete" />
+      <TabPane layoutX="208.0" prefHeight="523.0" prefWidth="636.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Electric Guitars">
+               <content>
+                  <TableView fx:id="tableView" prefHeight="200.0" prefWidth="200.0" />
+               </content>
+            </Tab>
+          <Tab text="Manufacturers" />
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>
